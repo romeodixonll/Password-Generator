@@ -90,6 +90,15 @@ while (spcInput.toLowerCase() !== 'yes' || spcInput.toLowerCase() !== 'no'){
 
 
 let generatePassword=(()=>{
+  if(upperInput.toLowerCase() === 'yes'){
+    upperChoice.forEach((upper)=>{
+      passwordToGenerate.push(upper)
+    })
+    if(upperInput.toLowerCase() === 'yes'){
+      passwordGenerated.push(upperChoice[Math.floor(Math.random()*(upperChoice.length - min +1))+min])
+      userInput--
+    }
+  }
   if(numInput.toLowerCase() === 'yes'){
     numsChoice.forEach((num)=>{
      
@@ -106,15 +115,6 @@ let generatePassword=(()=>{
     })
     if(lowerInput.toLowerCase() === 'yes'){
       passwordGenerated.push(lowerChoice[Math.floor(Math.random()*(lowerChoice.length - min +1))+min])
-      userInput--
-    }
-  }
-  if(upperInput.toLowerCase() === 'yes'){
-    upperChoice.forEach((upper)=>{
-      passwordToGenerate.push(upper)
-    })
-    if(upperInput.toLowerCase() === 'yes'){
-      passwordGenerated.push(upperChoice[Math.floor(Math.random()*(upperChoice.length - min +1))+min])
       userInput--
     }
   }
