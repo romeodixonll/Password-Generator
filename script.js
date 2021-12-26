@@ -26,6 +26,16 @@ while (userInput < 8 || userInput > 128){
   userInput = prompt('Please enter in number between 8 - 128 for password Generation')
 }
 
+upperInput = prompt('Would you like upper case letters in your password, type yes or no')
+while (upperInput.toLowerCase() !== 'yes' || upperInput.toLowerCase() !== 'no'){
+  if (upperInput === null || upperInput === ''){
+    upperInput = 'no'
+  }
+  if(upperInput.toLowerCase()  === 'yes' || upperInput.toLowerCase() === 'no'){
+    break;
+  }
+  upperInput = prompt('Would you like upper case letters in your password, type yes or no') 
+}
 
 
 numInput = prompt('Would you like numbers in your password, type yes or no')
@@ -37,19 +47,6 @@ while (numInput.toLowerCase() !== 'yes' || numInput.toLowerCase() !== 'no'){
     break;
   }
   numInput = prompt('Would you like numbers in your password, type yes or no')
-}
-
-
-
-upperInput = prompt('Would you like upper case letters in your password, type yes or no')
-while (upperInput.toLowerCase() !== 'yes' || upperInput.toLowerCase() !== 'no'){
-  if (upperInput === null || upperInput === ''){
-    upperInput = 'no'
-  }
-  if(upperInput.toLowerCase()  === 'yes' || upperInput.toLowerCase() === 'no'){
-    break;
-  }
-  upperInput = prompt('Would you like upper case letters in your password, type yes or no') 
 }
 
 
